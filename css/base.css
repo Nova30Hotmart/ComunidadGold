@@ -1,0 +1,188 @@
+/* ============================================
+   FUENTES HOTMART OFICIALES
+   ============================================ */
+@font-face {
+  font-family: 'Hotmart Display';
+  src: url('../assets/fonts/HotmartDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Hotmart Sans';
+  src: url('../assets/fonts/HotmartSansLight.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Hotmart Sans';
+  src: url('../assets/fonts/HotmartSansRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Hotmart Sans';
+  src: url('../assets/fonts/HotmartSans-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Hotmart Sans';
+  src: url('../assets/fonts/HotmartSansBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================
+   VARIABLES GLOBALES (fácil de editar)
+   ============================================ */
+:root {
+  /* Colores Hotmart oficiales */
+  --orange: #FF4000;
+  --orange-hover: #E63800;
+  --black: #0D0D0D;
+  --black-soft: #1A1A1A;
+  --black-card: #161616;
+  --cream: #F5F3EF;
+  --cream-warm: #EFEAE0;
+  --grey-200: #D9D2C7;
+  --grey-500: #8A8580;
+  --grey-700: #4A4642;
+
+  /* Variantes por tier */
+  --gold: #D4A75A;
+  --gold-light: #FFE082;
+  --silver: #C0C0C0;
+  --silver-light: #F0F0F0;
+  --titanium: #B85A30;
+
+  /* CTA — el botón verde del diseño */
+  --cta-green: #3DB36A;
+  --cta-green-hover: #2E9856;
+
+  /* Tipografía */
+  --font-display: 'Hotmart Display', Georgia, serif;
+  --font-body: 'Hotmart Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Espaciado */
+  --container: 1280px;
+  --padding-section: clamp(80px, 10vw, 160px);
+  --padding-x: clamp(20px, 5vw, 80px);
+
+  /* Animación */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   RESET MINIMAL
+   ============================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, svg {
+  max-width: 100%;
+  display: block;
+}
+
+button, input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--padding-x);
+}
+
+.display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+.eyebrow {
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 36px;
+  height: 1px;
+  background: currentColor;
+}
+
+/* Grano sutil global */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.04;
+  background-image: url('../assets/textures/grain.svg');
+  background-size: 200px 200px;
+  mix-blend-mode: overlay;
+}
+
+/* Animación de entrada al hacer scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
