@@ -281,5 +281,60 @@
 </footer>
 
 <script src="js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const contasInput = document.getElementById('conta-input');
+    const datalist = document.getElementById('contas-list');
+    const hiddenInput = document.getElementById('unique_id_real');
+
+    // 1. Busca o arquivo JSON oficial que você já validou na Vercel
+    fetch('./comunidad_gold_account_names.json')
+        .then(response => {
+            if (!response.ok) throw new Error('Archivo JSON no encontrado');
+            return response.json();
+        })
+        .then(data => {
+            // 2. Limpa a lista antes de preencher (segurança)
+            datalist.innerHTML = "";
+
+            // 3. Preenche o datalist com os nomes das contas
+            data.forEach(item => {
+                const option = document.createElement('option');
+                // Exibe: Grupo - Nome da Conta
+                option.value = `${item.account_group_name} - ${item.user_account_name}`;
+                // Guarda o Unique ID internamente
+                option.setAttribute('data-id', item.unique_id);
+                datalist.appendChild(option);
+            });
+            console.log("Cuentas cargadas con éxito");
+        })
+        .catch(error => console.error('Erro ao carregar contas:', error));
+
+    // 4. Lógica para capturar o ID real quando o usuário seleciona uma opção
+    contasInput.addEventListener('input', function() {
+        const val = this.value;
+        const options = datalist.options;
+        hiddenInput.value = ""; // Reseta o ID se o usuário apagar ou digitar errado
+
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].value === val) {
+                hiddenInput.value = options[i].getAttribute('data-id');
+                console.log("ID selecionado para Brevo:", hiddenInput.value);
+                break;
+            }
+        }
+    });
+
+    // 5. Bloqueia o envio se o ID da conta não for válido
+    document.querySelector('form').addEventListener('submit', function(e) {
+        if (!hiddenInput.value) {
+            e.preventDefault();
+            alert("Por favor, seleccione una cuenta válida de la lista desplegable.");
+        }
+    });
+});
+</script>
+
 </body>
 </html>
