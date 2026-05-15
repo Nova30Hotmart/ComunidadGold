@@ -62,7 +62,7 @@
       <h2 class="form-title">Asegura tu acceso</h2>
       <p class="form-date">23 JUN · 9 AM MX · 10 AM COL</p>
 
-      <div class="form-field">
+    <div class="form-field">
       <input list="contas-list" id="conta-input" class="form-input" placeholder="Digite para buscar su cuenta..." required>
       <datalist id="contas-list">
         </datalist>
@@ -70,15 +70,15 @@
     </div>
 
     <div class="form-field">
-      <input type="text" name="name" class="form-input" placeholder="Nombre completo" required autocomplete="name">
+      <input type="text" name="name" id="nome-completo" class="form-input" placeholder="Nombre completo" required autocomplete="name">
     </div>
 
     <div class="form-field">
-      <input type="email" name="email" class="form-input" placeholder="Correo electrónico" required autocomplete="email">
+      <input type="email" name="email" id="correo-electronico" class="form-input" placeholder="Correo electrónico" required autocomplete="email">
     </div>
 
     <div class="form-field">
-      <input type="tel" name="phone" class="form-input" placeholder="Teléfono (ej: +52...)" required>
+      <input type="tel" name="phone" id="telefono-cliente" class="form-input" placeholder="Teléfono (ej: +54...)" required>
     </div>
 
       <button type="submit" class="form-submit">QUIERO ESTAR AHÍ →</button>
@@ -287,50 +287,88 @@ document.addEventListener('DOMContentLoaded', function() {
     const contasInput = document.getElementById('conta-input');
     const datalist = document.getElementById('contas-list');
     const hiddenInput = document.getElementById('unique_id_real');
+    
+    let nombreGrupoSeleccionado = "";
 
-    // 1. Busca o arquivo JSON oficial que você já validou na Vercel
+    // 1. Descarga la lista de cuentas desde Vercel
     fetch('./comunidad_gold_account_names.json')
         .then(response => {
-            if (!response.ok) throw new Error('Archivo JSON no encontrado');
+            if (!response.ok) throw new Error('Archivo de cuentas no encontrado');
             return response.json();
         })
         .then(data => {
-            // 2. Limpa a lista antes de preencher (segurança)
             datalist.innerHTML = "";
-
-            // 3. Preenche o datalist com os nomes das contas
             data.forEach(item => {
                 const option = document.createElement('option');
-                // Exibe: Grupo - Nome da Conta
+                // Formato: Grupo - Nombre de la cuenta
                 option.value = `${item.account_group_name} - ${item.user_account_name}`;
-                // Guarda o Unique ID internamente
                 option.setAttribute('data-id', item.unique_id);
+                option.setAttribute('data-grupo', item.account_group_name);
                 datalist.appendChild(option);
             });
-            console.log("Cuentas cargadas con éxito");
+            console.log("Cuentas cargadas con éxito.");
         })
-        .catch(error => console.error('Erro ao carregar contas:', error));
+        .catch(error => console.error('Error al cargar cuentas:', error));
 
-    // 4. Lógica para capturar o ID real quando o usuário seleciona uma opção
+    // 2. Detecta qué cuenta seleccionó el usuario para extraer su ID y Grupo
     contasInput.addEventListener('input', function() {
         const val = this.value;
         const options = datalist.options;
-        hiddenInput.value = ""; // Reseta o ID se o usuário apagar ou digitar errado
+        hiddenInput.value = "";
+        nombreGrupoSeleccionado = "";
 
         for (let i = 0; i < options.length; i++) {
             if (options[i].value === val) {
                 hiddenInput.value = options[i].getAttribute('data-id');
-                console.log("ID selecionado para Brevo:", hiddenInput.value);
+                nombreGrupoSeleccionado = options[i].getAttribute('data-grupo');
                 break;
             }
         }
     });
 
-    // 5. Bloqueia o envio se o ID da conta não for válido
-    document.querySelector('form').addEventListener('submit', function(e) {
+    // 3. Envía los datos de forma segura hacia api/subscribe.js
+    document.getElementById('form-inscricao').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Validación: Si el usuario escribió algo que no está en la lista
         if (!hiddenInput.value) {
-            e.preventDefault();
             alert("Por favor, seleccione una cuenta válida de la lista desplegable.");
+            return;
+        }
+
+        const datosFormulario = {
+            email: document.getElementById('correo-electronico').value,
+            nombre: document.getElementById('nome-completo').value,
+            telefono: document.getElementById('telefono-cliente').value,
+            unique_id: hiddenInput.value,
+            nombre_grupo: nombreGrupoSeleccionado
+        };
+
+        // Cambiamos el estado del botón para que el usuario sepa que se está procesando
+        const botonEnviar = document.querySelector('.form-submit');
+        const textoOriginal = botonEnviar.innerText;
+        botonEnviar.disabled = true;
+        botonEnviar.innerText = "Procesando...";
+
+        try {
+            const respuesta = await fetch('/api/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(datosFormulario)
+            });
+
+            if (respuesta.ok) {
+                alert("¡Inscripción exitosa!");
+                this.reset();
+            } else {
+                alert("Hubo un error en la inscripción. Por favor, intente de nuevo.");
+            }
+        } catch (error) {
+            console.error("Error de conexión:", error);
+            alert("Error de conexión con el servidor.");
+        } finally {
+            botonEnviar.disabled = false;
+            botonEnviar.innerText = textoOriginal;
         }
     });
 });
