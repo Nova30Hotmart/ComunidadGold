@@ -63,11 +63,23 @@
       <p class="form-date">23 JUN · 9 AM MX · 10 AM COL</p>
 
       <div class="form-field">
-        <input type="text" name="name" class="form-input" placeholder="Nombre completo" required autocomplete="name">
-      </div>
-      <div class="form-field">
-        <input type="email" name="email" class="form-input" placeholder="Correo electrónico" required autocomplete="email">
-      </div>
+      <input list="contas-list" id="conta-input" class="form-input" placeholder="Digite para buscar su cuenta..." required>
+      <datalist id="contas-list">
+        </datalist>
+      <input type="hidden" name="unique_id" id="unique_id_real">
+    </div>
+
+    <div class="form-field">
+      <input type="text" name="name" class="form-input" placeholder="Nombre completo" required autocomplete="name">
+    </div>
+
+    <div class="form-field">
+      <input type="email" name="email" class="form-input" placeholder="Correo electrónico" required autocomplete="email">
+    </div>
+
+    <div class="form-field">
+      <input type="tel" name="phone" class="form-input" placeholder="Teléfono (ej: +52...)" required>
+    </div>
 
       <button type="submit" class="form-submit">QUIERO ESTAR AHÍ →</button>
 
