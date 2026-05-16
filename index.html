@@ -346,31 +346,19 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         try {
-            // Hacemos el fetch directo al servidor de Brevo sin intermediarios
-            const resposta = await fetch('https://api.brevo.com/v3/contacts', {
+            // Envia para a nossa rota do servidor que agora está limpa e nativa
+            const resposta = await fetch('/api/subscribe', {
                 method: 'POST',
-                headers: {
-                    'accept': 'application/json',
-                    'content-type': 'application/json',
-                    'api-key': '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' // <--- COLQUE SUA API KEY DO BREVO AQUI ENTRE AS ASPAS
-                },
-                body: JSON.stringify(datosBrevo)
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(datosFormulario)
             });
 
             if (resposta.ok) {
                 alert("¡Inscripción exitosa!");
                 formulario.reset();
             } else {
-                const erroServidor = await resposta.json();
-                console.error("Error de Brevo:", erroServidor);
                 alert("Hubo un error en la inscripción. Por favor, intente de nuevo.");
             }
-        } catch (error) {
-            console.error("Error de conexión:", error);
-            alert("Error de conexión con el servidor.");
-        } finally {
-            botonEnviar.disabled = false;
-            botonEnviar.innerText = textoOriginal;
         }
     });
 });
