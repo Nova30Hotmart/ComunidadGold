@@ -24,7 +24,7 @@ export default async function handler(req, res) {
   // Configura os cabeçalhos da requisição HTTP nativa
   const opciones = {
     hostname: 'api.brevo.com',
-    port: 440,
+    port: 443,
     path: '/v3/contacts',
     method: 'POST',
     headers: {
