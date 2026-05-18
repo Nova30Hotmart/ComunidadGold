@@ -102,6 +102,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  font-synthesis: none;
+  -webkit-font-synthesis: none;
 }
 
 img, svg {
@@ -130,6 +132,7 @@ a {
 
 .display {
   font-family: var(--font-display);
+  font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 0.95;
 }
