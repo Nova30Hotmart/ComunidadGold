@@ -327,6 +327,7 @@
 
 .para-quien-title {
   font-family: var(--font-display);
+  font-weight: 400;
   font-size: clamp(40px, 5.5vw, 80px);
   color: var(--cream);
   line-height: 1.05;
@@ -405,6 +406,7 @@
 
 .que-llevaras-title {
   font-family: var(--font-display);
+  font-weight: 400;
   font-size: clamp(48px, 6vw, 88px);
   line-height: 0.95;
 }
@@ -452,6 +454,7 @@
 
 .card-title {
   font-family: var(--font-display);
+  font-weight: 400;
   font-size: 32px;
   color: var(--cream);
   line-height: 1.05;
@@ -514,6 +517,7 @@
 
 .ponentes-title {
   font-family: var(--font-display);
+  font-weight: 400;
   font-size: clamp(48px, 6vw, 88px);
   color: var(--orange);
   line-height: 1;
@@ -657,6 +661,7 @@
 
 .personalizado-title {
   font-family: var(--font-display);
+  font-weight: 400;
   font-size: clamp(36px, 4vw, 56px);
   color: var(--cream);
   line-height: 1.05;
@@ -698,6 +703,7 @@
 
 .teaser-title {
   font-family: var(--font-display);
+  font-weight: 400;
   font-size: clamp(56px, 7vw, 96px);
   line-height: 1;
   margin-bottom: 60px;
@@ -774,6 +780,7 @@
 
 .cierre-title {
   font-family: var(--font-display);
+  font-weight: 400;
   font-size: clamp(48px, 6vw, 80px);
   line-height: 1;
   color: var(--cream);
@@ -838,12 +845,14 @@
 .footer-event {
   text-align: center;
   font-family: var(--font-display);
+  font-weight: 400;
   font-size: 20px;
   color: var(--cream);
 }
 .footer-tagline {
   text-align: right;
   font-family: var(--font-display);
+  font-weight: 400;
   font-style: italic;
   font-size: 20px;
   color: var(--orange);
