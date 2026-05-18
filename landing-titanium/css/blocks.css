@@ -617,19 +617,19 @@
   overflow: hidden;
 }
 
+.personalizado-card.titanium {
+  --tier-color: #D87555;
+  --tier-light: #F2A98F;
+}
+
+/* Variantes adicionales (disponibles para otras versiones de la página)
 .personalizado-card.gold {
   --tier-color: var(--gold);
   --tier-light: var(--gold-light);
 }
-
-/* Variantes adicionales (disponibles para otras versiones de la página)
 .personalizado-card.platinum {
   --tier-color: var(--silver);
   --tier-light: var(--silver-light);
-}
-.personalizado-card.titanium {
-  --tier-color: var(--titanium);
-  --tier-light: #E08570;
 }
 */
 
