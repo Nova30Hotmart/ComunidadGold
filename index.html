@@ -63,7 +63,7 @@
   <p class="form-date">23 JUN · 9 AM MX · 10 AM COL</p>
       
   <div class="form-field">
-    <input list="contas-list" id="conta-input" class="form-input" placeholder="Digite para buscar su cuenta..." required>
+    <input list="contas-list" id="conta-input" class="form-input" placeholder="Nombre de la cuenta en Hotmart" required>
     <datalist id="contas-list">
       </datalist>
     <input type="hidden" name="unique_id" id="unique_id_real">
@@ -324,7 +324,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
 
             if (!hiddenInput.value) {
-                alert("Por favor, seleccione una cuenta válida de la lista desplegable.");
+                alert("Seleccione su cuenta de Hotmart del menú desplegable. Si no la encuentra entre las opciones, por favor póngase en contacto con su gerente de cuentas.");
                 return;
             }
 
