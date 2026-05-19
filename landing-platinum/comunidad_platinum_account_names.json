@@ -1,0 +1,758 @@
+[
+  {
+    "unique_id": "ID-9211587",
+    "account_group_name": "2803204 ALBERTA INC.",
+    "user_producer_id": 9211587,
+    "user_account_name": "2803204 ALBERTA INC.",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-71001942",
+    "account_group_name": "911-DG MARKETING",
+    "user_producer_id": 71001942,
+    "user_account_name": "911-DG MARKETING",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-16204146",
+    "account_group_name": "ADRIAN EMILIO NARDELLI",
+    "user_producer_id": 16204146,
+    "user_account_name": "ADRIAN EMILIO NARDELLI",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-47578918",
+    "account_group_name": "ADRIANA GARZA LOPEZ",
+    "user_producer_id": 47578918,
+    "user_account_name": "ADRIANA GARZA LOPEZ",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-86752849",
+    "account_group_name": "ADRIANA GOMEZ DIEZ",
+    "user_producer_id": 86752849,
+    "user_account_name": "ADRIANA GOMEZ DIEZ",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-20941198",
+    "account_group_name": "ALEX JUST",
+    "user_producer_id": 20941198,
+    "user_account_name": "ALEX JUST",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-70750483",
+    "account_group_name": "ANDREA FERNÁNDEZ",
+    "user_producer_id": 70750483,
+    "user_account_name": "ANDREA FERNÁNDEZ",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-738",
+    "account_group_name": "ANDREA ROJAS",
+    "user_producer_id": 4440225,
+    "user_account_name": "ANDREA RODRIGUEZ ROJAS",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-738",
+    "account_group_name": "ANDREA ROJAS",
+    "user_producer_id": 29957235,
+    "user_account_name": "LUZ JIMENA LOZADA ORTEGA MARTINEZ",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-738",
+    "account_group_name": "ANDREA ROJAS",
+    "user_producer_id": 74381997,
+    "user_account_name": "VIVE TU MENSAJE",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-577",
+    "account_group_name": "ASOCIACIÓN DE PROFESIONALES DE DRONES",
+    "user_producer_id": 34150984,
+    "user_account_name": "APD INTEGRATED DRONE SERVICES S.A.S",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-577",
+    "account_group_name": "ASOCIACIÓN DE PROFESIONALES DE DRONES",
+    "user_producer_id": 49954791,
+    "user_account_name": "DIGITALTECH HOLDING LTD",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-5394981",
+    "account_group_name": "ATT CAPACITACION AUTOMOTRIZ LLC",
+    "user_producer_id": 5394981,
+    "user_account_name": "ATT CAPACITACION AUTOMOTRIZ LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-5403133",
+    "account_group_name": "AUTOMOTRIZ EN VIDEO S.A",
+    "user_producer_id": 5403133,
+    "user_account_name": "AUTOMOTRIZ EN VIDEO S.A",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-52448691",
+    "account_group_name": "BAELOS GROUP",
+    "user_producer_id": 52448691,
+    "user_account_name": "BAELOS GROUP",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-5675194",
+    "account_group_name": "BH SCALING GROUP CORP",
+    "user_producer_id": 5675194,
+    "user_account_name": "BH SCALING GROUP CORP",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-906",
+    "account_group_name": "BLACK MOON AGENCY",
+    "user_producer_id": 12567396,
+    "user_account_name": "BLACK MOON AGENCY, LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-906",
+    "account_group_name": "BLACK MOON AGENCY",
+    "user_producer_id": 78530288,
+    "user_account_name": "ZULU HUB LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-11784152",
+    "account_group_name": "BOLLUKMKT LLC",
+    "user_producer_id": 11784152,
+    "user_account_name": "BOLLUKMKT LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-57430221",
+    "account_group_name": "BOLOGNA SUGAR ART LLC.",
+    "user_producer_id": 57430221,
+    "user_account_name": "BOLOGNA SUGAR ART LLC.",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-679",
+    "account_group_name": "BRUNO GERARDO ACOSTA ELGUY",
+    "user_producer_id": 54704933,
+    "user_account_name": "BRUNO ACOSTA NEGOCIOS DIGITAIS LTDA",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-679",
+    "account_group_name": "BRUNO GERARDO ACOSTA ELGUY",
+    "user_producer_id": 12562715,
+    "user_account_name": "BRUNO GERARDO ACOSTA ELGUY",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-25857243",
+    "account_group_name": "BUSINESS COACHING",
+    "user_producer_id": 25857243,
+    "user_account_name": "BUSINESS COACHING",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-33556604",
+    "account_group_name": "BYNZO DIGITAL LLC",
+    "user_producer_id": 33556604,
+    "user_account_name": "BYNZO DIGITAL LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-30193732",
+    "account_group_name": "C G DECORATION GROUP S.A.S",
+    "user_producer_id": 30193732,
+    "user_account_name": "C G DECORATION GROUP S.A.S",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-97763396",
+    "account_group_name": "CAPITAL FLOW TRADER LLC",
+    "user_producer_id": 97763396,
+    "user_account_name": "CAPITAL FLOW TRADER LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-90861921",
+    "account_group_name": "CENTRO DE ESTUDIOS FISCALES INNOVACION Y NEGOCIOS",
+    "user_producer_id": 90861921,
+    "user_account_name": "CENTRO DE ESTUDIOS FISCALES INNOVACION Y NEGOCIOS",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-19351253",
+    "account_group_name": "CESAR MIGUEL CERVERA",
+    "user_producer_id": 19351253,
+    "user_account_name": "CESAR MIGUEL CERVERA",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-58944555",
+    "account_group_name": "CF ROJAS OÜ",
+    "user_producer_id": 58944555,
+    "user_account_name": "CF ROJAS OÜ",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-41753630",
+    "account_group_name": "CHAMIGA LLC",
+    "user_producer_id": 41753630,
+    "user_account_name": "CHAMIGA LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-33437678",
+    "account_group_name": "CHRISTIAN JAEL JARA GONZALEZ",
+    "user_producer_id": 33437678,
+    "user_account_name": "CHRISTIAN JAEL JARA GONZALEZ",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-15849458",
+    "account_group_name": "CLAYTON UEHARA LLC",
+    "user_producer_id": 15849458,
+    "user_account_name": "CLAYTON UEHARA LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-70299801",
+    "account_group_name": "DATAEDU S.A.S.",
+    "user_producer_id": 70299801,
+    "user_account_name": "DATAEDU S.A.S.",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-34576633",
+    "account_group_name": "DAVID JUNIOR SILVA TOMAS",
+    "user_producer_id": 34576633,
+    "user_account_name": "DAVID JUNIOR SILVA TOMAS",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-5918886",
+    "account_group_name": "DEICY YOHANA JARAMILLO BARRIENTOS",
+    "user_producer_id": 5918886,
+    "user_account_name": "DEICY YOHANA JARAMILLO BARRIENTOS",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-50026690",
+    "account_group_name": "DIGITALIS LLC",
+    "user_producer_id": 50026690,
+    "user_account_name": "DIGITALIS LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-79331407",
+    "account_group_name": "ECMOVAD SAS",
+    "user_producer_id": 79331407,
+    "user_account_name": "ECMOVAD SAS",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-13516305",
+    "account_group_name": "EDUCACION SOBRE LABORATORIO CLINICO",
+    "user_producer_id": 13516305,
+    "user_account_name": "EDUCACION SOBRE LABORATORIO CLINICO",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-52866210",
+    "account_group_name": "ELIANA NATALIE MOTOLO",
+    "user_producer_id": 52866210,
+    "user_account_name": "ELIANA NATALIE MOTOLO",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-8031717",
+    "account_group_name": "ELIANNY YÁNEZ",
+    "user_producer_id": 8031717,
+    "user_account_name": "ELIANNY YÁNEZ",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-85514804",
+    "account_group_name": "EMMA SEGURA SOCIEDAD DE RESPONSABILIDAD LIMITADA",
+    "user_producer_id": 85514804,
+    "user_account_name": "EMMA SEGURA SOCIEDAD DE RESPONSABILIDAD LIMITADA",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-12053422",
+    "account_group_name": "ERICK RODRIGUEZ",
+    "user_producer_id": 12053422,
+    "user_account_name": "ERICK RODRIGUEZ",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-23537730",
+    "account_group_name": "ERICKA CÉSPEDES MAROZZI",
+    "user_producer_id": 23537730,
+    "user_account_name": "ERICKA CÉSPEDES MAROZZI",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-28865971",
+    "account_group_name": "ESCALA UNIVERSITY S.A.C",
+    "user_producer_id": 28865971,
+    "user_account_name": "ESCALA UNIVERSITY S.A.C",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-5263619",
+    "account_group_name": "ESCUELA DE NEGOCIOS CONSCIENTES SAS",
+    "user_producer_id": 5263619,
+    "user_account_name": "ESCUELA DE NEGOCIOS CONSCIENTES SAS",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-48378185",
+    "account_group_name": "FINANZAS EMOCIONALES INC.",
+    "user_producer_id": 48378185,
+    "user_account_name": "FINANZAS EMOCIONALES INC.",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-86674137",
+    "account_group_name": "FINCONSCIENTE S.A.S.",
+    "user_producer_id": 86674137,
+    "user_account_name": "FINCONSCIENTE S.A.S.",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-35477910",
+    "account_group_name": "FINMARK ACADEMY LLC",
+    "user_producer_id": 35477910,
+    "user_account_name": "FINMARK ACADEMY LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-64446809",
+    "account_group_name": "GONZBEK CORP S.A. DE C.V.",
+    "user_producer_id": 64446809,
+    "user_account_name": "GONZBEK CORP S.A. DE C.V.",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-109606293",
+    "account_group_name": "GROWTH INSTITUTE INC",
+    "user_producer_id": 109606293,
+    "user_account_name": "GROWTH INSTITUTE INC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-11542721",
+    "account_group_name": "GRUPO APRENDIKA",
+    "user_producer_id": 11542721,
+    "user_account_name": "GRUPO APRENDIKA",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-64079146",
+    "account_group_name": "GUILLERMO DANIEL VÁZQUEZ PÉREZ",
+    "user_producer_id": 64079146,
+    "user_account_name": "GUILLERMO DANIEL VÁZQUEZ PÉREZ",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-1081",
+    "account_group_name": "HACKERMENTOR CIBERSEGURIDAD S.A.S.",
+    "user_producer_id": 83055176,
+    "user_account_name": "CRISTIAN VASCO,LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-1081",
+    "account_group_name": "HACKERMENTOR CIBERSEGURIDAD S.A.S.",
+    "user_producer_id": 37003220,
+    "user_account_name": "HACKERMENTOR CIBERSEGURIDAD S.A.S.",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-39501687",
+    "account_group_name": "HYLT FUERZA INTEGRAL",
+    "user_producer_id": 39501687,
+    "user_account_name": "HYLT FUERZA INTEGRAL",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-5840693",
+    "account_group_name": "IA UNIVERSITY SAS",
+    "user_producer_id": 5840693,
+    "user_account_name": "IA UNIVERSITY SAS",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-4290146",
+    "account_group_name": "INSTITUTO ALEJANDRO CARDOZO LLC",
+    "user_producer_id": 4290146,
+    "user_account_name": "INSTITUTO ALEJANDRO CARDOZO LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-63254100",
+    "account_group_name": "INVERSA SPA",
+    "user_producer_id": 63254100,
+    "user_account_name": "INVERSA SPA",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-6442618",
+    "account_group_name": "INVEST E CAPITAL FZC",
+    "user_producer_id": 6442618,
+    "user_account_name": "INVEST E CAPITAL FZC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-535",
+    "account_group_name": "JAVIER HERNANDEZ",
+    "user_producer_id": 46873842,
+    "user_account_name": "IPG GLOBAL LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-535",
+    "account_group_name": "JAVIER HERNANDEZ",
+    "user_producer_id": 5065274,
+    "user_account_name": "JAVIER HERNANDEZ",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-74434642",
+    "account_group_name": "JHOHAN MATEO OVALLE",
+    "user_producer_id": 74434642,
+    "user_account_name": "JHOHAN MATEO OVALLE",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-12839507",
+    "account_group_name": "JHONATAN MARCELO CARRERA MOYA",
+    "user_producer_id": 12839507,
+    "user_account_name": "JHONATAN MARCELO CARRERA MOYA",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-14104216",
+    "account_group_name": "JHONNY ENRIQUE ROMERO OSORIO",
+    "user_producer_id": 14104216,
+    "user_account_name": "JHONNY ENRIQUE ROMERO OSORIO",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-43070909",
+    "account_group_name": "JL BUSINESS LLC",
+    "user_producer_id": 43070909,
+    "user_account_name": "JL BUSINESS LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-66412049",
+    "account_group_name": "JUAN FELIPE AGUDELO",
+    "user_producer_id": 66412049,
+    "user_account_name": "JUAN FELIPE AGUDELO",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-6807588",
+    "account_group_name": "JUAN MALAN",
+    "user_producer_id": 6807588,
+    "user_account_name": "JUAN MALAN",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-63013347",
+    "account_group_name": "JUAN PABLO BRUNO",
+    "user_producer_id": 63013347,
+    "user_account_name": "JUAN PABLO BRUNO",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-11871788",
+    "account_group_name": "JUAN ROGELIO ABRAHAM",
+    "user_producer_id": 11871788,
+    "user_account_name": "JUAN ROGELIO ABRAHAM",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-38560017",
+    "account_group_name": "KAREN CHISCUL",
+    "user_producer_id": 38560017,
+    "user_account_name": "KAREN CHISCUL",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-20020080",
+    "account_group_name": "KRISTHEL TABOADA",
+    "user_producer_id": 20020080,
+    "user_account_name": "KRISTHEL TABOADA",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-82924420",
+    "account_group_name": "LA MAGIA DEL CAOS SAPI DE CV",
+    "user_producer_id": 82924420,
+    "user_account_name": "LA MAGIA DEL CAOS SAPI DE CV",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-10611188",
+    "account_group_name": "LEGADO DE RIQUEZA HISPANOAMERICA LLC",
+    "user_producer_id": 10611188,
+    "user_account_name": "LEGADO DE RIQUEZA HISPANOAMERICA LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-67246791",
+    "account_group_name": "LUIS FERNANDO CORDOVA QUIROGA",
+    "user_producer_id": 67246791,
+    "user_account_name": "LUIS FERNANDO CORDOVA QUIROGA",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-11894939",
+    "account_group_name": "LUIS JAVIER HINESTROZA BALANTA",
+    "user_producer_id": 11894939,
+    "user_account_name": "LUIS JAVIER HINESTROZA BALANTA",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-89345599",
+    "account_group_name": "MAPO AGENCY LLC",
+    "user_producer_id": 89345599,
+    "user_account_name": "MAPO AGENCY LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-26466282",
+    "account_group_name": "MARIA PAULA FUKUDA",
+    "user_producer_id": 26466282,
+    "user_account_name": "MARIA PAULA FUKUDA",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-41264792",
+    "account_group_name": "MARKETING SOLUTIONS SPA.",
+    "user_producer_id": 41264792,
+    "user_account_name": "MARKETING SOLUTIONS SPA.",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-65351512",
+    "account_group_name": "MARY SOL MONTEAGUDO",
+    "user_producer_id": 65351512,
+    "user_account_name": "MARY SOL MONTEAGUDO",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-24733262",
+    "account_group_name": "MARÍA DEL PILAR SORDO MARTÍNEZ",
+    "user_producer_id": 24733262,
+    "user_account_name": "MARÍA DEL PILAR SORDO MARTÍNEZ",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-60204055",
+    "account_group_name": "MARÍA DEL SOCORRO SÁNCHEZ VILLEGAS",
+    "user_producer_id": 60204055,
+    "user_account_name": "MARÍA DEL SOCORRO SÁNCHEZ VILLEGAS",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-6320509",
+    "account_group_name": "MAURICIO CASTRO",
+    "user_producer_id": 6320509,
+    "user_account_name": "MAURICIO CASTRO",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-45279741",
+    "account_group_name": "MINDFUL FITNESS ACADEMY LLC",
+    "user_producer_id": 45279741,
+    "user_account_name": "MINDFUL FITNESS ACADEMY LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-63696112",
+    "account_group_name": "NAM NIDHAN KHALSA",
+    "user_producer_id": 63696112,
+    "user_account_name": "NAM NIDHAN KHALSA",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-5333897",
+    "account_group_name": "NASSE LAVALLE CORP",
+    "user_producer_id": 5333897,
+    "user_account_name": "NASSE LAVALLE CORP",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-71245603",
+    "account_group_name": "NAZARY SIKLALY LEYVA GANDARA",
+    "user_producer_id": 71245603,
+    "user_account_name": "NAZARY SIKLALY LEYVA GANDARA",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-15332739",
+    "account_group_name": "NELSON PERDOMO",
+    "user_producer_id": 15332739,
+    "user_account_name": "NELSON PERDOMO",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-45382409",
+    "account_group_name": "OLDEMAR SOLIS TORRES",
+    "user_producer_id": 45382409,
+    "user_account_name": "OLDEMAR SOLIS TORRES",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-37358791",
+    "account_group_name": "ONE DAY LESS LLC.",
+    "user_producer_id": 37358791,
+    "user_account_name": "ONE DAY LESS LLC.",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-19683434",
+    "account_group_name": "PABLO VAZQUEZ",
+    "user_producer_id": 19683434,
+    "user_account_name": "PABLO VAZQUEZ",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-18989721",
+    "account_group_name": "PROSCALING LLC",
+    "user_producer_id": 18989721,
+    "user_account_name": "PROSCALING LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-7660162",
+    "account_group_name": "RAFAEL ALEJANDRO ROMERO ALATORRE",
+    "user_producer_id": 7660162,
+    "user_account_name": "RAFAEL ALEJANDRO ROMERO ALATORRE",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-1296",
+    "account_group_name": "RAFAEL GUIA RANGEL",
+    "user_producer_id": 98754584,
+    "user_account_name": "DESPERTAR LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ACG-1296",
+    "account_group_name": "RAFAEL GUIA RANGEL",
+    "user_producer_id": 5719646,
+    "user_account_name": "RAFAEL GUIA RANGEL",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-96769260",
+    "account_group_name": "RAMIRO GONCALVES",
+    "user_producer_id": 96769260,
+    "user_account_name": "RAMIRO GONCALVES",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-77837310",
+    "account_group_name": "RARP AGENCY SAC",
+    "user_producer_id": 77837310,
+    "user_account_name": "RARP AGENCY SAC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-25117806",
+    "account_group_name": "RITHANA ACADEMY LLC",
+    "user_producer_id": 25117806,
+    "user_account_name": "RITHANA ACADEMY LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-67124190",
+    "account_group_name": "RODRIGO GARCIA PLATAS",
+    "user_producer_id": 67124190,
+    "user_account_name": "RODRIGO GARCIA PLATAS",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-60427710",
+    "account_group_name": "SER PARA HACER LLC",
+    "user_producer_id": 60427710,
+    "user_account_name": "SER PARA HACER LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-27206364",
+    "account_group_name": "SERGIO ANDRÉS MONROY HERNÁNDEZ",
+    "user_producer_id": 27206364,
+    "user_account_name": "SERGIO ANDRÉS MONROY HERNÁNDEZ",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-101914733",
+    "account_group_name": "SOCIALABS LLC",
+    "user_producer_id": 101914733,
+    "user_account_name": "SOCIALABS LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-39292793",
+    "account_group_name": "SOCIEDAD DE ORIENTACION EN SALUD",
+    "user_producer_id": 39292793,
+    "user_account_name": "SOCIEDAD DE ORIENTACION EN SALUD",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-18290253",
+    "account_group_name": "TEO TINIVELLI",
+    "user_producer_id": 18290253,
+    "user_account_name": "TEO TINIVELLI",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-16252415",
+    "account_group_name": "VALERIA BERNARDO TARAMONA",
+    "user_producer_id": 16252415,
+    "user_account_name": "VALERIA BERNARDO TARAMONA",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-25056237",
+    "account_group_name": "VELTROS GROUP LLC",
+    "user_producer_id": 25056237,
+    "user_account_name": "VELTROS GROUP LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-35167974",
+    "account_group_name": "VICTORIA PASTRY LLC",
+    "user_producer_id": 35167974,
+    "user_account_name": "VICTORIA PASTRY LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-68931898",
+    "account_group_name": "WORKANA LLC",
+    "user_producer_id": 68931898,
+    "user_account_name": "WORKANA LLC",
+    "cluster_comunidade": "Platinum"
+  },
+  {
+    "unique_id": "ID-64783777",
+    "account_group_name": "YULI MAR RIVAS DE PARRA",
+    "user_producer_id": 64783777,
+    "user_account_name": "YULI MAR RIVAS DE PARRA",
+    "cluster_comunidade": "Platinum"
+  }
+]

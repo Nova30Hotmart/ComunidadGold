@@ -63,10 +63,22 @@
       <p class="form-date">23 JUN · 9 AM MX · 10 AM COL</p>
 
       <div class="form-field">
-        <input type="text" name="name" class="form-input" placeholder="Nombre completo" required autocomplete="name">
+      <input list="contas-list" id="conta-input" class="form-input" placeholder="Nombre de la cuenta en Hotmart" required>
+      <datalist id="contas-list">
+      </datalist>
+      <input type="hidden" name="unique_id" id="unique_id_real">
       </div>
+  
       <div class="form-field">
-        <input type="email" name="email" class="form-input" placeholder="Correo electrónico" required autocomplete="email">
+        <input type="text" name="name" id="nome-completo" class="form-input" placeholder="Nombre completo" required autocomplete="name">
+      </div>
+      
+      <div class="form-field">
+        <input type="email" name="email" id="correo-electronico" class="form-input" placeholder="Correo electrónico" required autocomplete="email">
+      </div>
+      
+      <div class="form-field">
+        <input type="tel" name="phone" id="telefono-cliente" class="form-input" placeholder="Teléfono (ej: +54...)" required>
       </div>
 
       <button type="submit" class="form-submit">QUIERO ESTAR AHÍ →</button>
@@ -269,5 +281,100 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const contasInput = document.getElementById('conta-input');
+    const datalist = document.getElementById('contas-list');
+    const hiddenInput = document.getElementById('unique_id_real');
+    const formElemento = document.getElementById('hero-form');
+    
+    let nombreGrupoSeleccionado = "";
+
+    // 1. CARGA EL JSON ESPECÍFICO DE TITANIUM
+    fetch('./comunidad_titanium_account_names.json')
+        .then(response => {
+            if (!response.ok) throw new Error('Archivo de cuentas Titanium no encontrado');
+            return response.json();
+        })
+        .then(data => {
+            datalist.innerHTML = "";
+            data.forEach(item => {
+                const option = document.createElement('option');
+                // Mantendo o padrão: Nome do Grupo - Nome da Conta
+                option.value = `${item.account_group_name} - ${item.user_account_name}`;
+                option.setAttribute('data-id', item.unique_id);
+                option.setAttribute('data-grupo', item.account_group_name);
+                datalist.appendChild(option);
+            });
+            console.log("Cuentas Titanium cargadas con éxito.");
+        })
+        .catch(error => console.error('Error ao carregar contas:', error));
+
+    // 2. DETECTAR SELECCIÓN
+    contasInput.addEventListener('input', function() {
+        const val = this.value;
+        const options = datalist.options;
+        hiddenInput.value = "";
+        nombreGrupoSeleccionado = "";
+
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].value === val) {
+                hiddenInput.value = options[i].getAttribute('data-id');
+                nombreGrupoSeleccionado = options[i].getAttribute('data-grupo');
+                break;
+            }
+        }
+    });
+
+    // 3. ENVÍO AL SERVIDOR (Função Serverless em /api/subscribe)
+    if (formElemento) {
+        formElemento.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // VALIDAÇÃO AMIGÁVEL
+            if (!hiddenInput.value) {
+                alert("Seleccione su cuenta de Hotmart del menú desplegable. Si no la encuentra entre las opciones, por favor póngase en contacto con su gerente de cuentas.");
+                return;
+            }
+
+            const datosFormulario = {
+                email: document.getElementById('correo-electronico').value,
+                nombre: document.getElementById('nome-completo').value,
+                telefono: document.getElementById('telefono-cliente').value,
+                unique_id: hiddenInput.value,
+                nombre_grupo: nombreGrupoSeleccionado
+            };
+
+            const botonEnviar = document.getElementById('btn-enviar');
+            if (botonEnviar) {
+                botonEnviar.disabled = true;
+                botonEnviar.innerText = "Procesando...";
+            }
+
+            try {
+                const resposta = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(datosFormulario)
+                });
+
+                if (resposta.ok) {
+                    window.location.href = 'gracias.html';
+                } else {
+                    alert("Hubo un error en la inscripción. Por favor, intente de nuevo.");
+                }
+            } catch (error) {
+                console.error("Erro de conexão:", error);
+                alert("Error de conexión con el servidor.");
+            } finally {
+                if (botonEnviar) {
+                    botonEnviar.disabled = false;
+                    botonEnviar.innerText = "QUIERO ESTAR AHÍ →";
+                }
+            }
+        });
+    }
+});
+</script>
 </body>
 </html>
