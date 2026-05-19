@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Camino a NOVA 30 — Hotmart · Platinum</title>
+<title>Camino a NOVA 30 — Hotmart</title>
 <meta name="description" content="Una jornada con los creadores que más facturan en el mercado hispano. 23 de junio 2026. Exclusivo para clientes Hotmart.">
 <meta property="og:title" content="Camino a NOVA 30 — Hotmart">
 <meta property="og:description" content="Un día. Cuatro expertos. El camino al Top 30.">
@@ -32,7 +32,7 @@
 <!-- ============ HERO ============ -->
 <section class="hero" id="hero">
   <div class="hero-orb">
-    <img src="assets/orbs/orb-silver.svg" alt="">
+    <img src="assets/orbs/orb-gold.svg" alt="">
   </div>
 
   <div class="hero-content">
@@ -58,29 +58,33 @@
 
   <div class="hero-form-wrap" id="form-target">
     <form class="hero-form" id="hero-form" novalidate>
-      <p class="form-tag">EVENTO ONLINE</p>
-      <h2 class="form-title">Asegura tu acceso</h2>
-      <p class="form-date">23 JUN · 9 AM MX · 10 AM COL</p>
-
-      <div class="form-field">
-        <input type="text" name="name" class="form-input" placeholder="Nombre completo" required autocomplete="name">
-      </div>
-      <div class="form-field">
-        <input type="email" name="email" class="form-input" placeholder="Correo electrónico" required autocomplete="email">
-      </div>
-
-      <button type="submit" class="form-submit">QUIERO ESTAR AHÍ →</button>
-
-      <div class="form-error" role="alert"></div>
-      <div class="form-success" role="status"></div>
-
-      <p class="form-helper">*Te enviaremos los detalles a tu correo</p>
-
-      <div class="form-trust">
-        <strong>Acceso 100% gratuito</strong> · Cupos limitados<br>
-        Solo para clientes Hotmart
-      </div>
-    </form>
+  <p class="form-tag">EVENTO ONLINE</p>
+  <h2 class="form-title">Asegura tu acceso</h2>
+  <p class="form-date">23 JUN · 9 AM MX · 10 AM COL</p>
+      
+  <div class="form-field">
+    <input list="contas-list" id="conta-input" class="form-input" placeholder="Nombre de la cuenta en Hotmart" required>
+    <datalist id="contas-list">
+      </datalist>
+    <input type="hidden" name="unique_id" id="unique_id_real">
+  </div>
+  
+  <div class="form-field">
+    <input type="text" name="name" id="nome-completo" class="form-input" placeholder="Nombre completo" required autocomplete="name">
+  </div>
+  
+  <div class="form-field">
+    <input type="email" name="email" id="correo-electronico" class="form-input" placeholder="Correo electrónico" required autocomplete="email">
+  </div>
+  
+  <div class="form-field">
+    <input type="tel" name="phone" id="telefono-cliente" class="form-input" placeholder="Teléfono (ej: +54...)" required>
+  </div>
+  
+  <button type="submit" class="form-submit" id="btn-enviar">QUIERO ESTAR AHÍ →</button>
+  <div class="form-error" role="alert"></div>
+  <div class="form-success" role="status"></div>
+</form>
   </div>
 </section>
 
@@ -203,16 +207,16 @@
 
 <!-- ============ BLOQUE 5 — PERSONALIZADO ============ -->
 <section class="personalizado">
-  <div class="personalizado-card platinum">
-    <img src="assets/orbs/orb-silver.svg" alt="" class="personalizado-orb">
+  <div class="personalizado-card gold">
+    <img src="assets/orbs/orb-gold.svg" alt="" class="personalizado-orb">
     <div class="personalizado-content">
       <div class="personalizado-tag">HECHO PARA TI</div>
       <h2 class="personalizado-title display">
-        El 23 de junio, cinco horas que <span class="accent">te ahorrarán meses de prueba y error.</span>
+        El 23 de junio, cinco horas que <span class="accent">cambiarán tu negocio digital desde ya.</span>
       </h2>
     </div>
     <div class="personalizado-body">
-      <p>Te llevarás cinco horas con creadores que ya pasaron por donde tú estás hoy. Su experiencia te ahorra meses de prueba y error en las decisiones más caras del crecimiento.</p>
+      <p>Te llevarás contenido aplicable. Sin teoría, sin promesas vacías. Las cosas que harías mañana en tu operación si tuvieras la información que tienen ellos.</p>
     </div>
   </div>
 </section>
@@ -238,7 +242,7 @@
 
 <!-- ============ BLOQUE 7 — CIERRE ============ -->
 <section class="cierre" id="cierre">
-  <img src="assets/orbs/orb-silver.svg" alt="" class="cierre-orb">
+  <img src="assets/orbs/orb-gold.svg" alt="" class="cierre-orb">
   <div class="container">
     <div class="cierre-content reveal">
       <h2 class="cierre-title display">
@@ -269,5 +273,104 @@
 </footer>
 
 <script src="js/main.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const contasInput = document.getElementById('conta-input');
+    const datalist = document.getElementById('contas-list');
+    const hiddenInput = document.getElementById('unique_id_real');
+    const formElemento = document.getElementById('hero-form');
+    
+    let nombreGrupoSeleccionado = "";
+
+    // 1. Carrega o arquivo JSON diretamente da raiz da Vercel
+    fetch('./comunidad_gold_account_names.json')
+        .then(response => {
+            if (!response.ok) throw new Error('Archivo de cuentas no encontrado');
+            return response.json();
+        })
+        .then(data => {
+            datalist.innerHTML = "";
+            data.forEach(item => {
+                const option = document.createElement('option');
+                option.value = `${item.account_group_name} - ${item.user_account_name}`;
+                option.setAttribute('data-id', item.unique_id);
+                option.setAttribute('data-grupo', item.account_group_name);
+                datalist.appendChild(option);
+            });
+            console.log("Cuentas cargadas con éxito.");
+        })
+        .catch(error => console.error('Error al cargar cuentas:', error));
+
+    // 2. Detecta a conta selecionada para extrair o ID e Grupo
+    contasInput.addEventListener('input', function() {
+        const val = this.value;
+        const options = datalist.options;
+        hiddenInput.value = "";
+        nombreGrupoSeleccionado = "";
+
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].value === val) {
+                hiddenInput.value = options[i].getAttribute('data-id');
+                nombreGrupoSeleccionado = options[i].getAttribute('data-grupo');
+                break;
+            }
+        }
+    });
+
+    // 3. Envia os dados para a Serverless Function nativa (/api/subscribe)
+    if (formElemento) {
+        formElemento.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            if (!hiddenInput.value) {
+                alert("Seleccione su cuenta de Hotmart del menú desplegable. Si no la encuentra entre las opciones, por favor póngase en contacto con su gerente de cuentas.");
+                return;
+            }
+
+            const datosFormulario = {
+                email: document.getElementById('correo-electronico').value,
+                nombre: document.getElementById('nome-completo').value,
+                telefono: document.getElementById('telefono-cliente').value,
+                unique_id: hiddenInput.value,
+                nombre_grupo: nombreGrupoSeleccionado
+            };
+
+            const botonEnviar = document.getElementById('btn-enviar');
+            const textoOriginal = botonEnviar ? botonEnviar.innerText : "QUIERO ESTAR AHÍ →";
+            
+            if (botonEnviar) {
+                botonEnviar.disabled = true;
+                botonEnviar.innerText = "Procesando...";
+            }
+
+            try {
+                const respuesta = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(datosFormulario)
+                });
+
+                if (respuesta.ok) {
+                    alert("¡Inscripción exitosa!");
+                    formElemento.reset();
+                } else {
+                    alert("Hubo un error en la inscripción. Por favor, intente de nuevo.");
+                }
+            } catch (error) {
+                console.error("Error de conexión:", error);
+                alert("Error de conexión con el servidor.");
+            } finally {
+                if (botonEnviar) {
+                    botonEnviar.disabled = false;
+                    botonEnviar.innerText = textoOriginal;
+                }
+            }
+        });
+    }
+});
+</script>
+
 </body>
 </html>
+
