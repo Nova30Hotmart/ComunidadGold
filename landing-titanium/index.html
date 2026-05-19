@@ -359,8 +359,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 if (resposta.ok) {
-                    alert("¡Inscripción exitosa!");
-                    formElemento.reset();
+                    window.location.href = 'gracias.html';
                 } else {
                     alert("Hubo un error en la inscripción. Por favor, intente de nuevo.");
                 }
