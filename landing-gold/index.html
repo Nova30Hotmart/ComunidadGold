@@ -176,53 +176,38 @@
       Comparten cómo construyeron, cómo operan hoy, y qué harían distinto si tuvieran que volver a empezar.
     </p>
 
-```html
-<div class="speakers-grid">
+    <div class="speakers-grid">
 
-  <article class="speaker-card">
-    <img src="/assets/speakers/simon-daniela.jpg" alt="Simón Pulgarín y Daniela Salazar" />
-    <h3>Simón Pulgarín y Daniela Salazar</h3>
-    <p class="speaker-meta">Colombia 🇨🇴</p>
-    <p class="speaker-bio">Estrategas de marca personal, IA e infoproductos. +2.8M seguidores convertidos en comunidad, autoridad y ventas.</p>
-  </article>
+      <article class="speaker-card reveal">
+        <img src="assets/speakers/simon-daniela.jpg" alt="Simón Pulgarín y Daniela Salazar" loading="lazy">
+        <h3>Simón Pulgarín y Daniela Salazar</h3>
+        <p class="speaker-meta">Colombia 🇨🇴</p>
+        <p class="speaker-bio">Estrategas de marca personal, IA e infoproductos. +2.8M seguidores convertidos en comunidad, autoridad y ventas.</p>
+      </article>
 
-  <article class="speaker-card">
-    <img src="/assets/speakers/julio-iero.jpg" alt="Julio Iero" />
-    <h3>Julio Iero</h3>
-    <p class="speaker-meta">México 🇲🇽</p>
-    <p class="speaker-bio">Fundó Un Día Menos con +5,500 alumnos en LATAM. Convierte viralidad en libertad financiera con embudos y bienes raíces.</p>
-  </article>
+      <article class="speaker-card reveal" data-reveal-delay="100">
+        <img src="assets/speakers/julio-iero.jpg" alt="Julio Iero" loading="lazy">
+        <h3>Julio Iero</h3>
+        <p class="speaker-meta">México 🇲🇽</p>
+        <p class="speaker-bio">Fundó Un Día Menos con +5,500 alumnos en LATAM. Convierte viralidad en libertad financiera con embudos y bienes raíces.</p>
+      </article>
 
-  <article class="speaker-card">
-    <img src="/assets/speakers/melissa-escobar.jpg" alt="Melissa Escobar" />
-    <h3>Melissa Escobar</h3>
-    <p class="speaker-meta">Colombia 🇨🇴</p>
-    <p class="speaker-bio">Top 5 productoras mujeres de LATAM. Ha ayudado a +60 mil alumnos a monetizar con IA y negocios digitales.</p>
-  </article>
+      <article class="speaker-card reveal" data-reveal-delay="200">
+        <img src="assets/speakers/melissa-escobar.jpg" alt="Melissa Escobar" loading="lazy">
+        <h3>Melissa Escobar</h3>
+        <p class="speaker-meta">Colombia 🇨🇴</p>
+        <p class="speaker-bio">Top 5 productoras mujeres de LATAM. Ha ayudado a +60 mil alumnos a monetizar con IA y negocios digitales.</p>
+      </article>
 
-  <article class="speaker-card">
-    <img src="/assets/speakers/laura-santiago.jpg" alt="Laura y Santiago" />
-    <h3>Laura y Santiago</h3>
-    <p class="speaker-meta">Colombia 🇨🇴</p>
-    <p class="speaker-bio">Top 25 global de Hotmart. Han vendido en +156 países y 20 idiomas con estrategias Low Ticket y VSL Evergreen.</p>
-  </article>
+      <article class="speaker-card reveal" data-reveal-delay="300">
+        <img src="assets/speakers/laura-santiago.jpg" alt="Laura y Santiago" loading="lazy">
+        <h3>Laura y Santiago</h3>
+        <p class="speaker-meta">Colombia 🇨🇴</p>
+        <p class="speaker-bio">Top 25 global de Hotmart. Han vendido en +156 países y 20 idiomas con estrategias Low Ticket y VSL Evergreen.</p>
+      </article>
 
-</div>
-```
-export function SpeakersGrid() {
-  return (
-    <div className="speakers-grid">
-      {speakers.map((s) => (
-        <article key={s.name} className="speaker-card">
-          <img src={s.image} alt={s.name} loading="lazy" />
-          <h3>{s.name}</h3>
-          <p className="speaker-meta">{s.country}</p>
-          <p className="speaker-bio">{s.bio}</p>
-        </article>
-      ))}
     </div>
-  );
-}
+
     <p class="ponentes-footer">
       <strong>Décadas de experiencia combinada</strong> construyendo negocios digitales en el mercado hispano. La curva de aprendizaje que tomó años, en un solo día.
     </p>
@@ -396,4 +381,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </body>
 </html>
-
