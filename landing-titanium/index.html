@@ -12,6 +12,59 @@
 <link rel="preload" href="assets/fonts/HotmartSansRegular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/blocks.css">
+  <style>
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  text-align: left;
+}
+.speaker-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--black-card);
+  border: 1px solid rgba(245, 243, 239, 0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.4s var(--ease-out);
+}
+.speaker-card:hover { transform: translateY(-6px); }
+.speaker-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  background: #0A0A0A;
+}
+.speaker-card h3 {
+  font-size: 18px;
+  line-height: 1.25;
+  margin: 20px 24px 6px;
+  font-weight: 700;
+  color: var(--cream);
+}
+.speaker-card .speaker-meta {
+  font-size: 14px;
+  color: rgba(245, 243, 239, 0.55);
+  margin: 0 24px 12px;
+  letter-spacing: 0.04em;
+}
+.speaker-card .speaker-bio {
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(245, 243, 239, 0.78);
+  margin: 0 24px 24px;
+}
+@media (max-width: 980px) {
+  .speakers-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 560px; }
+}
+@media (max-width: 560px) {
+  .speakers-grid { grid-template-columns: 1fr; gap: 24px; max-width: 360px; }
+}
+</style>
 </head>
 <body>
 
@@ -184,27 +237,36 @@
       Comparten cómo construyeron, cómo operan hoy, y qué harían distinto si tuvieran que volver a empezar.
     </p>
 
-    <div class="ponentes-grid">
-      <div class="ponente-card">
-        <div class="ponente-img"><img src="assets/speakers/placeholder.svg" alt=""></div>
-        <div class="ponente-name">Nombre Apellido</div>
-        <div class="ponente-eje">Eje Oferta · Brasil 🇧🇷</div>
-      </div>
-      <div class="ponente-card">
-        <div class="ponente-img"><img src="assets/speakers/placeholder.svg" alt=""></div>
-        <div class="ponente-name">Nombre Apellido</div>
-        <div class="ponente-eje">Eje Tráfico · México 🇲🇽</div>
-      </div>
-      <div class="ponente-card">
-        <div class="ponente-img"><img src="assets/speakers/placeholder.svg" alt=""></div>
-        <div class="ponente-name">Nombre Apellido</div>
-        <div class="ponente-eje">Eje Comunidad · Colombia 🇨🇴</div>
-      </div>
-      <div class="ponente-card">
-        <div class="ponente-img"><img src="assets/speakers/placeholder.svg" alt=""></div>
-        <div class="ponente-name">Nombre Apellido</div>
-        <div class="ponente-eje">Eje Escala · España 🇪🇸</div>
-      </div>
+<div class="speakers-grid">
+
+      <article class="speaker-card reveal">
+        <img src="assets/speakers/simon-daniela.jpg" alt="Simón Pulgarín y Daniela Salazar" loading="lazy">
+        <h3>Simón Pulgarín y Daniela Salazar</h3>
+        <p class="speaker-meta">Colombia 🇨🇴</p>
+        <p class="speaker-bio">Estrategas de marca personal, IA e infoproductos. +2.8M seguidores convertidos en comunidad, autoridad y ventas.</p>
+      </article>
+
+      <article class="speaker-card reveal" data-reveal-delay="100">
+        <img src="assets/speakers/julio-iero.jpg" alt="Julio Iero" loading="lazy">
+        <h3>Julio Iero</h3>
+        <p class="speaker-meta">México 🇲🇽</p>
+        <p class="speaker-bio">Fundó Un Día Menos con +5,500 alumnos en LATAM. Convierte viralidad en libertad financiera con embudos y bienes raíces.</p>
+      </article>
+
+      <article class="speaker-card reveal" data-reveal-delay="200">
+        <img src="assets/speakers/melissa-escobar.jpg" alt="Melissa Escobar" loading="lazy">
+        <h3>Melissa Escobar</h3>
+        <p class="speaker-meta">Colombia 🇨🇴</p>
+        <p class="speaker-bio">Top 5 productoras mujeres de LATAM. Ha ayudado a +60 mil alumnos a monetizar con IA y negocios digitales.</p>
+      </article>
+
+      <article class="speaker-card reveal" data-reveal-delay="300">
+        <img src="assets/speakers/laura-santiago.jpg" alt="Laura y Santiago" loading="lazy">
+        <h3>Laura y Santiago</h3>
+        <p class="speaker-meta">Colombia 🇨🇴</p>
+        <p class="speaker-bio">Top 25 global de Hotmart. Han vendido en +156 países y 20 idiomas con estrategias Low Ticket y VSL Evergreen.</p>
+      </article>
+
     </div>
 
     <p class="ponentes-footer">
