@@ -1,6 +1,6 @@
 // =================================================================
 // CAMINO A NOVA 30 — Landing JS
-// Scroll animations + parallax + Brevo form
+// Scroll animations + parallax
 // =================================================================
 
 (function() {
@@ -93,108 +93,7 @@
   window.addEventListener('resize', updateParallax, { passive: true });
 
   // ===============================================================
-  // 5. FORMULARIO BREVO
-  // ===============================================================
-  const form = document.getElementById('hero-form');
-  const errorBox = document.querySelector('.form-error');
-  const successBox = document.querySelector('.form-success');
-
-  // ====== CONFIGURACIÓN BREVO ======
-  // Edgar: reemplaza esto con tu URL embed de Brevo
-  // Lo obtienes en: Brevo → Contacts → Forms → tu form → Share → Embed URL
-  const BREVO_FORM_URL = 'PLACEHOLDER_BREVO_URL';
-
-  // O si usas API directa de Brevo:
-  // 1. Crea API key en: Brevo → SMTP & API → API Keys
-  // 2. Crea una lista en: Brevo → Contacts → Lists, copia el ID
-  // 3. Backend recomendado (NO pongas la API key en este JS público):
-  //    Crea un endpoint en tu servidor que reciba el form y reenvíe a Brevo
-  // ==================================
-
-  if (form) {
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-
-      const nameInput = form.querySelector('[name="name"]');
-      const emailInput = form.querySelector('[name="email"]');
-      const submitBtn = form.querySelector('button[type="submit"]');
-
-      const name = nameInput.value.trim();
-      const email = emailInput.value.trim();
-
-      // Validación básica
-      if (!name || !email) {
-        showMessage('error', 'Por favor completa todos los campos.');
-        return;
-      }
-
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        showMessage('error', 'Por favor ingresa un correo válido.');
-        return;
-      }
-
-      // Estado de carga
-      submitBtn.disabled = true;
-      const originalText = submitBtn.textContent;
-      submitBtn.textContent = 'Enviando...';
-
-      try {
-        // ===== INTEGRACIÓN BREVO =====
-        // Opción A: si tienes el form embed URL de Brevo:
-        // const response = await fetch(BREVO_FORM_URL, {
-        //   method: 'POST',
-        //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        //   body: new URLSearchParams({
-        //     NOMBRE: name,
-        //     EMAIL: email,
-        //   }),
-        // });
-
-        // Opción B: tu propio endpoint que conecta a Brevo:
-        // const response = await fetch('/api/subscribe', {
-        //   method: 'POST',
-        //   headers: { 'Content-Type': 'application/json' },
-        //   body: JSON.stringify({ name, email }),
-        // });
-
-        // PLACEHOLDER mientras tanto: simulación de éxito
-        await new Promise(resolve => setTimeout(resolve, 800));
-        const success = true;
-
-        if (success) {
-          // Guardar datos en localStorage por si la página de gracias los necesita
-          try {
-            sessionStorage.setItem('nova30_name', name);
-            sessionStorage.setItem('nova30_email', email);
-          } catch (e) { /* sessionStorage puede no estar disponible */ }
-
-          // Redirigir a página de gracias
-          window.location.href = 'gracias.html';
-        } else {
-          throw new Error('Error al enviar');
-        }
-      } catch (err) {
-        console.error('Form error:', err);
-        showMessage('error', 'Ocurrió un error. Por favor intenta de nuevo.');
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-      }
-    });
-  }
-
-  function showMessage(type, message) {
-    const box = type === 'error' ? errorBox : successBox;
-    const other = type === 'error' ? successBox : errorBox;
-    if (other) other.classList.remove('show');
-    if (box) {
-      box.textContent = message;
-      box.classList.add('show');
-    }
-  }
-
-  // ===============================================================
-  // 6. SMOOTH SCROLL para anclas
+  // 5. SMOOTH SCROLL para anclas
   // ===============================================================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -207,7 +106,7 @@
   });
 
   // ===============================================================
-  // 7. INIT
+  // 6. INIT
   // ===============================================================
   updateNav();
   updateParallax();
