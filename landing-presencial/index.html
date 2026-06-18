@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let nombreGrupoSeleccionado = "";
 
-    // CARREGA O JSON DA GOLD (que você colocou na pasta)
+    // 1. CARGA EL JSON DE LA COMUNIDAD GOLD PRESENCIAL
     fetch('./comunidad_gold_account_names.json') 
         .then(response => {
             if (!response.ok) throw new Error('Archivo de cuentas no encontrado');
@@ -399,6 +399,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Error al cargar cuentas:', error));
 
+    // 2. DETECTAR SELECCIÓN
     contasInput.addEventListener('input', function() {
         const val = this.value;
         const options = datalist.options;
@@ -414,12 +415,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // 3. ENVÍO AL SERVIDOR Y VALIDACIÓN ABSOLUTA
     if (formElemento) {
         formElemento.addEventListener('submit', async function(e) {
+            
+            // Bloqueia preventivamente qualquer outra ação
             e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
 
+            // VALIDAÇÃO AMIGÁVEL E FOCO NO CAMPO
             if (!hiddenInput.value) {
                 alert("Seleccione su cuenta de Hotmart del menú desplegable. Si no la encuentra entre las opciones, por favor póngase en contacto con su gerente de cuentas.");
+                contasInput.focus();
                 return;
             }
 
@@ -432,7 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             const botonEnviar = document.getElementById('btn-enviar');
-            const textoOriginal = botonEnviar ? botonEnviar.innerText : "QUIERO ESTAR AHÍ →";
+            const textoOriginal = botonEnviar ? botonEnviar.innerText : "CONFIRMO MI LUGAR →";
             
             if (botonEnviar) {
                 botonEnviar.disabled = true;
@@ -447,7 +455,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 if (respuesta.ok) {
-                    // Redirecionamento automático sem alerta
                     window.location.href = 'gracias.html';
                 } else {
                     alert("Hubo un error en la inscripción. Por favor, intente de nuevo.");
@@ -461,7 +468,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     botonEnviar.innerText = textoOriginal;
                 }
             }
-        });
+        }, true); // <-- Fase de captura (prioridade máxima do script)
     }
 });
 </script>
