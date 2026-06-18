@@ -134,7 +134,7 @@
         <input type="tel" name="phone" id="telefono-cliente" class="form-input" placeholder="Teléfono (ej: +54...)" required>
       </div>
 
-      <button type="submit" class="form-submit">QUIERO ESTAR AHÍ →</button>
+      <button type="submit" class="form-submit" id="btn-enviar">QUIERO ESTAR AHÍ →</button>
 
       <div class="form-error" role="alert"></div>
       <div class="form-success" role="status"></div>
@@ -362,7 +362,6 @@ document.addEventListener('DOMContentLoaded', function() {
             datalist.innerHTML = "";
             data.forEach(item => {
                 const option = document.createElement('option');
-                // Mantendo o padrão: Nome do Grupo - Nome da Conta
                 option.value = `${item.account_group_name} - ${item.user_account_name}`;
                 option.setAttribute('data-id', item.unique_id);
                 option.setAttribute('data-grupo', item.account_group_name);
@@ -391,11 +390,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // 3. ENVÍO AL SERVIDOR (Função Serverless em /api/subscribe)
     if (formElemento) {
         formElemento.addEventListener('submit', async function(e) {
+            
+            // Bloqueia preventivamente qualquer outra ação
             e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
 
             // VALIDAÇÃO AMIGÁVEL
             if (!hiddenInput.value) {
                 alert("Seleccione su cuenta de Hotmart del menú desplegable. Si no la encuentra entre las opciones, por favor póngase en contacto con su gerente de cuentas.");
+                
+                // Mantém o usuário na página e foca no campo para ele corrigir
+                contasInput.focus();
                 return;
             }
 
@@ -434,7 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     botonEnviar.innerText = "QUIERO ESTAR AHÍ →";
                 }
             }
-        });
+        }, true); // <-- A fase de captura em ação para prioridade máxima
     }
 });
 </script>
