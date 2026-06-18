@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let nombreGrupoSeleccionado = "";
 
-    // 1. Carrega o arquivo JSON diretamente da raiz da Vercel
+    // 1. Carrega o arquivo JSON
     fetch('./comunidad_gold_account_names.json')
         .then(response => {
             if (!response.ok) throw new Error('Archivo de cuentas no encontrado');
@@ -360,11 +360,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 option.setAttribute('data-grupo', item.account_group_name);
                 datalist.appendChild(option);
             });
-            console.log("Cuentas cargadas con éxito.");
         })
         .catch(error => console.error('Error al cargar cuentas:', error));
 
-    // 2. Detecta a conta selecionada para extrair o ID e Grupo
+    // 2. Detecta a conta selecionada
     contasInput.addEventListener('input', function() {
         const val = this.value;
         const options = datalist.options;
@@ -380,21 +379,29 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 3. Envia os dados para a Serverless Function nativa (/api/subscribe)
+    // 3. Envia os dados e valida
     if (formElemento) {
+        // O "true" no final ativa a Fase de Captura, forçando este script a rodar ANTES do main.js
         formElemento.addEventListener('submit', async function(e) {
-            e.preventDefault();
             
-            // BLOQUEIA a execução de outros scripts de submit (como o main.js)
+            // Bloqueia preventivamente qualquer outra ação
+            e.preventDefault();
+            e.stopPropagation();
             e.stopImmediatePropagation();
 
             if (!hiddenInput.value) {
                 alert("Seleccione su cuenta de Hotmart del menú desplegable. Si no la encuentra entre las opciones, por favor póngase en contacto con su gerente de cuentas.");
-                // Foca no campo para facilitar a correção pelo usuário
+                
+                // Mantém o usuário na página e foca no campo para ele corrigir (Recomendado)
                 contasInput.focus();
+                
+                // Se preferir forçar o recarregamento (vai apagar os outros campos), remova as barras da linha abaixo:
+                // window.location.reload(); 
+                
                 return;
             }
 
+            // Se passou na validação, coleta os dados
             const datosFormulario = {
                 email: document.getElementById('correo-electronico').value,
                 nombre: document.getElementById('nome-completo').value,
@@ -432,7 +439,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     botonEnviar.innerText = textoOriginal;
                 }
             }
-        });
+        }, true); // <-- Este "true" é a peça-chave que resolve o problema.
     }
 });
 </script>
