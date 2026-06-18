@@ -384,9 +384,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (formElemento) {
         formElemento.addEventListener('submit', async function(e) {
             e.preventDefault();
+            
+            // BLOQUEIA a execução de outros scripts de submit (como o main.js)
+            e.stopImmediatePropagation();
 
             if (!hiddenInput.value) {
                 alert("Seleccione su cuenta de Hotmart del menú desplegable. Si no la encuentra entre las opciones, por favor póngase en contacto con su gerente de cuentas.");
+                // Foca no campo para facilitar a correção pelo usuário
+                contasInput.focus();
                 return;
             }
 
